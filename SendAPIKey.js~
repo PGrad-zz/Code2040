@@ -1,0 +1,13 @@
+var request = require('request')
+var requestPost = require('requestPost')
+var fs = require ('fs')
+
+var url = 'http://challenge.code2040.org/api/register'
+var apiKey = fs.readFileSync ('apikey.txt', 'utf8').trim();
+
+var postData = {
+	'token': apiKey,
+	'github': 'https://github.com/PGrad/Code2040'
+}
+
+requestPost (url, postData)

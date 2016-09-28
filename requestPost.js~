@@ -1,0 +1,11 @@
+var request = require ('request');
+
+module.exports = (url, postData) {
+	request ({
+			url: url,
+			method: 'POST'
+			json: postData
+		} function (error, resp, body) {
+			if (!error && resp.statusCode == 200)
+				
+}
